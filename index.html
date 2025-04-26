@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prep</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      background: #efefef;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mockup {
+      width: 450px;
+      height: 800px;
+      border: solid 10px #FFFFFF;
+      margin: 0 auto;
+      background-image: url(./img/bg1.png);
+      background-size: cover; /* 100% -> cover for better fit */
+      background-position: center;
+      position: relative; /* Important: relative for absolute children */
+      overflow: visible;
+    }
+
+    .txt1 {
+      resize: none;
+      width: 80%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      font-family: "Dancing Script", cursive;
+      position: absolute;
+      left: 50%;
+      top: 22%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 28px;
+      color: #F5E2AF;
+      padding: 10px;
+    }
+
+    .txt2 {
+      resize: none;
+      width: 65%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      position: absolute;
+      font-family: "Poppins", sans-serif;
+      left: 50%;
+      top: 24.5%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 8px;
+      color: #F5E2AF;
+      padding: 10px;
+    }
+
+    .txt3 {
+      resize: none;
+      width: 62%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 22px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      line-height: 28px;
+    }
+
+    .txt4 {
+      resize: none;
+      width: 70%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 45px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Dancing Script", cursive;
+      line-height: 22px;
+    }
+    .txt5 {
+      resize: none;
+      width: 70%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 45px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Dancing Script", cursive;
+      line-height: 22px;
+    }
+    .txt6 {
+      resize: none;
+      width: 70%; /* 100% se kam, taake left-right margin aaye */
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 58%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 45px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Dancing Script", cursive;
+      line-height: 22px;
+    }
+
+    .txt7 {
+      resize: none;
+      width: 66%; /* 100% se kam, taake left-right margin aaye */
+      height: 10%;
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 13px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      line-height: 18px;
+    }
+
+    .txt8 {
+      resize: none;
+      width: 42%; /* 100% se kam, taake left-right margin aaye */
+      height: 10%;
+      position: absolute;
+      left: 50%;
+      top: 71%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 22px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Dancing Script", cursive;
+      line-height: 28px;
+    }
+
+    .txt9 {
+      resize: none;
+      width: 42%; /* 100% se kam, taake left-right margin aaye */
+      height: 10%;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 22px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      line-height: 28px;
+    }
+
+    .txt10 {
+      resize: none;
+      width: 57%; /* 100% se kam, taake left-right margin aaye */
+      height: 7%;
+      position: absolute;
+      left: 50%;
+      top: 83%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 14px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      line-height: 28px;
+    }
+
+    .txt11 {
+      resize: none;
+      width: 57%; /* 100% se kam, taake left-right margin aaye */
+      height: 7%;
+      position: absolute;
+      left: 50%;
+      top: 86%;
+      transform: translate(-50%, -50%);
+      background: none;
+      outline: none;
+      border: none;
+      text-align: center;
+      font-size: 14px;
+      color: #F5E2AF;
+      padding: 10px;
+      font-family: "Poppins", sans-serif;
+      line-height: 28px;
+    }
+
+    #tryAgainBtn, #downloadBtn{
+      width: 90px;
+      height: 30px;
+      border-radius: 8px;
+      background: #460208;
+      color: #efefef;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Mobile Screens ke liye Responsive */
+    @media only screen and (max-width: 768px) {
+      .mockup {
+        width: 350px;
+        height: 600px;
+      }
+      .txt1 {
+        font-size: 18px;
+        width: 90%;
+      }
+      .txt2 {
+        font-size: 5px;
+        width: 90%;
+      }
+      .txt3 {
+        font-size: 12px;
+        width: 90%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt4, .txt5, .txt6{
+        font-size: 25px;
+        width: 90%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+
+      .txt7 {
+        font-size: 7.5px;
+        width: 98%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+
+      .txt8{
+        font-size: 14px;
+        top: 73%;
+        width: 42%;
+        height: 12%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt9 {
+        font-size: 16px;
+        width: 98%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt10, .txt11 {
+        font-size: 9px;
+        top: 85%;
+        width: 62%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt11 {
+        top: 88%;
+      }
+
+    }
+
+
+    /* Extra Small Devices (Phones) */
+    @media only screen and (max-width: 480px) {
+      .mockup {
+        width: 300px;
+        height: 500px;
+      }
+      .txt1 {
+        font-size: 18px;
+        width: 90%;
+      }
+      .txt2 {
+        font-size: 5px;
+        width: 90%;
+      }
+      .txt3 {
+        font-size: 12px;
+        width: 90%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt4, .txt5, .txt6{
+        font-size: 25px;
+        width: 90%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+
+      .txt7 {
+        font-size: 7.5px;
+        width: 98%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+
+      .txt8{
+        font-size: 14px;
+        top: 73%;
+        width: 42%;
+        height: 12%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt9 {
+        font-size: 16px;
+        width: 98%;
+        width: 50%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt10, .txt11 {
+        font-size: 9px;
+        top: 85%;
+        width: 62%;
+        line-height: 120%;
+        /* background: #efefef; */
+      }
+      .txt11 {
+        top: 88%;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="mc" class="mockup">
+    <!-- Top Area -->
+
+    <textarea class="txt1" name="text">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</textarea>
+    <textarea class="txt2" name="text" >(In the name of Allah, the Most Gracious, the Most Merciful)</textarea>
+    <textarea class="txt3" name="text" >With the blessings of their families</textarea>
+    
+    <!-- Middle Area -->
+
+    <textarea class="txt4" name="text" >Groom Name</textarea>
+    <textarea class="txt5" name="text" >&</textarea>
+    <textarea class="txt6" name="text" >Bride Name</textarea>
+
+    <!-- Bottom Area -->
+
+    <textarea class="txt7" name="text" >joyfully request your presence to celebrate the blessed occasion of their</textarea>
+    <textarea class="txt8" name="text" >Nikkah Ceremony In Shaa Allah</textarea>
+    <textarea class="txt9" name="text" >ON</textarea>
+    <textarea class="txt10" name="text" >Sunday, July 28, 2025 at 2:00 PM</textarea>
+    <textarea class="txt11" name="text" >Venue: House Street</textarea>
+  </div>
+
+  <button id="tryAgainBtn" style="margin: 20px auto; display: block;">Try Again</button>
+
+  <script>
+   
+
+    const tryAgainBtn = document.getElementById('tryAgainBtn');
+    tryAgainBtn.addEventListener('click', function () {
+      location.reload(); // This will reload the page
+    });
+    </script>
+    
+  
+</body>
+</html>
